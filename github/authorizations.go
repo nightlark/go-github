@@ -12,35 +12,43 @@ import (
 
 // Scope models a GitHub authorization scope.
 //
-// GitHub API docs: https://developer.github.com/v3/oauth/#scopes
+// GitHub API docs: https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/#available-scopes
 type Scope string
 
 // This is the set of scopes for GitHub API V3
 const (
-	ScopeNone           Scope = "(no scope)" // REVISIT: is this actually returned, or just a documentation artifact?
-	ScopeUser           Scope = "user"
-	ScopeUserEmail      Scope = "user:email"
-	ScopeUserFollow     Scope = "user:follow"
-	ScopePublicRepo     Scope = "public_repo"
-	ScopeRepo           Scope = "repo"
-	ScopeRepoDeployment Scope = "repo_deployment"
-	ScopeRepoStatus     Scope = "repo:status"
-	ScopeDeleteRepo     Scope = "delete_repo"
-	ScopeNotifications  Scope = "notifications"
-	ScopeGist           Scope = "gist"
-	ScopeReadRepoHook   Scope = "read:repo_hook"
-	ScopeWriteRepoHook  Scope = "write:repo_hook"
-	ScopeAdminRepoHook  Scope = "admin:repo_hook"
-	ScopeAdminOrgHook   Scope = "admin:org_hook"
-	ScopeReadOrg        Scope = "read:org"
-	ScopeWriteOrg       Scope = "write:org"
-	ScopeAdminOrg       Scope = "admin:org"
-	ScopeReadPublicKey  Scope = "read:public_key"
-	ScopeWritePublicKey Scope = "write:public_key"
-	ScopeAdminPublicKey Scope = "admin:public_key"
-	ScopeReadGPGKey     Scope = "read:gpg_key"
-	ScopeWriteGPGKey    Scope = "write:gpg_key"
-	ScopeAdminGPGKey    Scope = "admin:gpg_key"
+	ScopeNone            Scope = ""
+	ScopeUser            Scope = "user"
+	ScopeUserEmail       Scope = "user:email"
+	ScopeUserFollow      Scope = "user:follow"
+	ScopePublicRepo      Scope = "public_repo"
+	ScopeRepo            Scope = "repo"
+	ScopeRepoDeployment  Scope = "repo_deployment"
+	ScopeRepoInvite      Scope = "repo:invite"
+	ScopeRepoStatus      Scope = "repo:status"
+	ScopeSecurityEvents  Scope = "security_events"
+	ScopeDeleteRepo      Scope = "delete_repo"
+	ScopeNotifications   Scope = "notifications"
+	ScopeGist            Scope = "gist"
+	ScopeReadRepoHook    Scope = "read:repo_hook"
+	ScopeWriteRepoHook   Scope = "write:repo_hook"
+	ScopeAdminRepoHook   Scope = "admin:repo_hook"
+	ScopeAdminOrgHook    Scope = "admin:org_hook"
+	ScopeReadOrg         Scope = "read:org"
+	ScopeWriteOrg        Scope = "write:org"
+	ScopeAdminOrg        Scope = "admin:org"
+	ScopeReadPublicKey   Scope = "read:public_key"
+	ScopeWritePublicKey  Scope = "write:public_key"
+	ScopeAdminPublicKey  Scope = "admin:public_key"
+	ScopeReadGPGKey      Scope = "read:gpg_key"
+	ScopeWriteGPGKey     Scope = "write:gpg_key"
+	ScopeAdminGPGKey     Scope = "admin:gpg_key"
+	ScopeReadDiscussion  Scope = "read:discussion"
+	ScopeWriteDiscussion Scope = "write:discussion"
+	ScopeReadPackages    Scope = "read:packages"
+	ScopeWritePackages   Scope = "write:packages"
+	ScopeDeletePackages  Scope = "delete:packages"
+	ScopeWorkflow        Scope = "workflow"
 )
 
 // AuthorizationsService handles communication with the authorization related
